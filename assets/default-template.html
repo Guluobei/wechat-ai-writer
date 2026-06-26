@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>{{title}}</title>
+  <!--
+    ============================================================
+    公众号 AI 行业内容默认排版模板  v1.0.0
+    说明：
+    1. 公众号编辑器会过滤 <style>、外部 CSS 与部分属性，因此所有
+       样式均以内联 style 形式写在元素上，确保渲染稳定。
+    2. 下方 <style> 仅用于：① 定义 CSS 变量便于维护查阅；
+       ② 浏览器本地预览时的兜底渲染。公众号发布以元素内联样式为准。
+    3. 占位符：{{title}} {{cover_image}} {{author}} {{date}}
+       {{summary}} {{content}} {{footer}} {{tags}}
+    4. 移动端基线：max-width 677px，正文字号 16px，行高 1.8。
+    ============================================================
+  -->
+  <style>
+    /* ===== CSS 变量定义（供维护查阅，公众号实际渲染依赖元素内联样式）===== */
+    :root {
+      /* 主色系 —— AI 行业简洁深色风格 */
+      --color-title:        #1a1a2e;   /* 标题深色 */
+      --color-text:         #333333;   /* 正文 */
+      --color-text-sub:     #666666;   /* 次要文字 */
+      --color-text-meta:    #999999;   /* 元信息/图片说明 */
+      --color-accent:       #2d5af6;   /* 强调色（科技蓝） */
+      --color-accent-soft:  #eaf0fe;   /* 强调色浅底 */
+      --color-bg:           #ffffff;   /* 内容区背景 */
+      --color-bg-page:      #f5f5f7;   /* 页面外背景 */
+      --color-quote-bg:     #f6f8fa;   /* 引用块底色 */
+      --color-code-bg:      #1e1e2e;   /* 代码块深色背景 */
+      --color-code-text:    #e4e4e7;   /* 代码块文字 */
+      --color-inline-code-bg: #f0f0f3;/* 行内代码底色 */
+      --color-inline-code:  #c7254e;   /* 行内代码文字 */
+      --color-divider:      #e5e7eb;   /* 分隔线 */
+      /* 排版基线 */
+      --font-size-base:     16px;
+      --line-height-base:   1.8;
+      --max-width:          677px;
+      --radius:             8px;
+    }
+
+    /* ===== 浏览器预览兜底（公众号发布时被内联样式覆盖）===== */
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; background: var(--color-bg-page);
+           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+           color: var(--color-text); font-size: var(--font-size-base);
+           line-height: var(--line-height-base); }
+    .article { max-width: var(--max-width); margin: 0 auto; background: var(--color-bg);
+               padding: 24px 20px; }
+  </style>
+</head>
+
+<body style="margin:0;padding:0;background-color:#f5f5f7;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;">
+
+  <!-- ============ 文章容器（移动端适配：max-width 677px）============ -->
+  <section class="article" style="max-width:677px;margin:0 auto;background-color:#ffffff;padding:24px 20px;box-sizing:border-box;">
+
+    <!-- ============ 封面图 ============ -->
+    <!-- {{cover_image}}：替换为封面图 URL；若无需封面可整段删除 -->
+    <img src="{{cover_image}}" alt="封面图" style="width:100%;height:auto;display:block;margin:0 0 24px;border-radius:8px;object-fit:cover;" />
+
+    <!-- ============ 标题 ============ -->
+    <h1 style="margin:0 0 16px;font-size:22px;font-weight:700;line-height:1.4;color:#1a1a2e;letter-spacing:0.5px;">{{title}}</h1>
+
+    <!-- ============ 元信息（作者 · 日期）============ -->
+    <div style="margin:0 0 20px;font-size:13px;color:#999999;line-height:1.6;">
+      {{author}} <span style="margin:0 6px;color:#dddddd;">·</span> {{date}}
+    </div>
+
+    <!-- ============ 导语 ============ -->
+    <!-- {{summary}}：1-2 句导读，强调色左边框引导 -->
+    <p style="margin:0 0 24px;padding:10px 14px;background-color:#eaf0fe;border-left:3px solid #2d5af6;font-size:15px;line-height:1.75;color:#444444;border-radius:0 4px 4px 0;">{{summary}}</p>
+
+    <!-- ============ 正文 ============ -->
+    <!--
+      {{content}}：正文内容占位符。
+      正文生成时，各元素请严格使用下方「正文元素内联样式参考」中的内联样式，
+      以保证公众号渲染一致。支持的元素：h2 / h3 / p / blockquote /
+      pre(代码块) / code(行内) / img + figcaption(图片说明) / hr(分隔线) / ul / ol。
+    -->
+    <section style="font-size:16px;line-height:1.8;color:#333333;">
+      {{content}}
+    </section>
+
+    <!-- ============ 正文后分隔线 ============ -->
+    <hr style="border:none;border-top:1px solid #e5e7eb;margin:32px 0;" />
+
+    <!-- ============ 标签 ============ -->
+    <!-- {{tags}}：替换为标签字符串，如「#GPT-4o #多模态 #OpenAI」；无需可删 -->
+    <div style="margin:0 0 16px;font-size:13px;color:#2d5af6;line-height:1.7;">{{tags}}</div>
+
+    <!-- ============ 页脚 ============ -->
+    <div style="margin:0;padding:14px 16px;background-color:#f6f8fa;border-radius:6px;font-size:13px;color:#666666;line-height:1.7;">
+      {{footer}}
+    </div>
+
+  </section>
+
+
+  <!--
+    ============================================================
+    正文元素内联样式参考（{{content}} 内各元素请按下述内联样式输出）
+    ============================================================
+
+    【二级标题 h2】—— 深色 + 强调色左边框
+    <h2 style="margin:32px 0 16px;font-size:19px;font-weight:700;line-height:1.5;color:#1a1a2e;border-left:4px solid #2d5af6;padding-left:12px;">二级标题</h2>
+
+    【三级标题 h3】—— 深色、无装饰
+    <h3 style="margin:24px 0 12px;font-size:17px;font-weight:600;line-height:1.5;color:#1a1a2e;">三级标题</h3>
+
+    【正文段落 p】—— 16px / 行高 1.8
+    <p style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#333333;letter-spacing:0.3px;">正文内容……</p>
+
+    【引用块 blockquote】—— 浅底 + 强调色左边框
+    <blockquote style="margin:0 0 20px;padding:12px 16px;background-color:#f6f8fa;border-left:3px solid #2d5af6;color:#555555;font-size:15px;line-height:1.75;border-radius:0 4px 4px 0;">引用内容……</blockquote>
+
+    【代码块 pre】—— 深色背景
+    <pre style="margin:0 0 20px;padding:16px;background-color:#1e1e2e;color:#e4e4e7;font-size:14px;line-height:1.6;border-radius:6px;overflow-x:auto;font-family:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;white-space:pre;"><code style="font-family:inherit;color:inherit;background:transparent;padding:0;">代码内容……</code></pre>
+
+    【行内代码 code】—— 浅底
+    <code style="background-color:#f0f0f3;color:#c7254e;padding:2px 6px;border-radius:3px;font-size:14px;font-family:'SFMono-Regular',Consolas,Menlo,monospace;">inline_code</code>
+
+    【图片 + 图片说明】—— 图下居中说明文字
+    <figure style="margin:0 0 24px;">
+      <img src="{{image}}" alt="图片说明" style="width:100%;height:auto;display:block;margin:0 0 8px;border-radius:8px;" />
+      <figcaption style="text-align:center;color:#999999;font-size:13px;line-height:1.5;margin:0;">图片说明文字</figcaption>
+    </figure>
+
+    【分隔线 hr】
+    <hr style="border:none;border-top:1px solid #e5e7eb;margin:32px 0;" />
+
+    【无序列表 ul】
+    <ul style="margin:0 0 20px;padding-left:22px;font-size:16px;line-height:1.8;color:#333333;">
+      <li style="margin-bottom:8px;">列表项</li>
+    </ul>
+
+    【有序列表 ol】
+    <ol style="margin:0 0 20px;padding-left:22px;font-size:16px;line-height:1.8;color:#333333;">
+      <li style="margin-bottom:8px;">步骤项</li>
+    </ol>
+    ============================================================
+  -->
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "name": "AI 行业默认信源清单",
+    "version": "1.0.0",
+    "description": "公众号 AI 行业内容创作 skill 的内置默认信源，覆盖官方博客、论文、媒体、社区、产品五大类型。priority 越小优先级越高（1=核心必采，2=常规采集，3=补充采集）。",
+    "type_enum": ["official", "media", "community", "paper"],
+    "category_enum": ["model", "product", "research", "industry", "tools"],
+    "priority_enum": "1(最高) / 2(常规) / 3(补充)",
+    "updated_at": "2026-06-26"
+  },
+  "sources": [
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/",
+      "type": "official",
+      "priority": 1,
+      "category": "model",
+      "description": "OpenAI 官方博客，发布 GPT 系列模型更新、研究笔记与产品动态，是追踪闭源旗舰模型的第一手信源。"
+    },
+    {
+      "name": "Anthropic Blog",
+      "url": "https://www.anthropic.com/news",
+      "type": "official",
+      "priority": 1,
+      "category": "model",
+      "description": "Anthropic 官方博客，聚焦 Claude 模型迭代与 AI 对齐/安全研究，观点具有行业标杆意义。"
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/",
+      "type": "official",
+      "priority": 1,
+      "category": "model",
+      "description": "Google AI 官方博客，报道 Gemini 系列模型、研究突破与 Google 产品中的 AI 应用。"
+    },
+    {
+      "name": "Meta AI Blog",
+      "url": "https://ai.meta.com/blog/",
+      "type": "official",
+      "priority": 2,
+      "category": "model",
+      "description": "Meta AI 官方博客，Llama 系列开源模型与基础研究方向的主要发布渠道，开源生态风向标。"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog",
+      "type": "official",
+      "priority": 1,
+      "category": "tools",
+      "description": "Hugging Face 官方博客，开源模型生态、工具链（Transformers/Diffusers 等）动态与社区实践。"
+    },
+    {
+      "name": "DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/",
+      "type": "official",
+      "priority": 2,
+      "category": "research",
+      "description": "Google DeepMind 官方博客，前沿 AI 研究（AlphaFold/Gemini 基础研究等）与科学突破报道。"
+    },
+    {
+      "name": "Microsoft Research Blog",
+      "url": "https://www.microsoft.com/en-us/research/blog/",
+      "type": "official",
+      "priority": 2,
+      "category": "research",
+      "description": "微软研究院博客，AI 基础研究与企业级落地实践，覆盖办公、云、agent 等方向。"
+    },
+    {
+      "name": "NVIDIA AI Blog",
+      "url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+      "type": "official",
+      "priority": 3,
+      "category": "tools",
+      "description": "NVIDIA 官方博客，AI 算力、基础设施（CUDA/TensorRT/NIM 等）与训练推理工具链动态。"
+    },
+    {
+      "name": "arXiv cs.AI",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "type": "paper",
+      "priority": 1,
+      "category": "research",
+      "description": "arXiv 人工智能板块，最新 AI 学术论文预印本，追踪研究前沿与原始方法的第一手来源。"
+    },
+    {
+      "name": "arXiv cs.CL",
+      "url": "https://arxiv.org/list/cs.CL/recent",
+      "type": "paper",
+      "priority": 1,
+      "category": "research",
+      "description": "arXiv 计算语言学板块，NLP 与大语言模型相关论文聚集地，LLM 研究核心信源。"
+    },
+    {
+      "name": "Papers With Code",
+      "url": "https://paperswithcode.com/",
+      "type": "paper",
+      "priority": 2,
+      "category": "research",
+      "description": "论文+代码+基准榜单一体化平台，便于追踪各任务 SOTA 与可复现研究，兼顾工程视角。"
+    },
+    {
+      "name": "Stanford HAI AI Index",
+      "url": "https://aiindex.stanford.edu/",
+      "type": "official",
+      "priority": 2,
+      "category": "research",
+      "description": "斯坦福 HAI 发布的年度 AI 指数报告，提供行业权威统计数据与趋势分析，引用价值高。"
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/",
+      "type": "media",
+      "priority": 2,
+      "category": "industry",
+      "description": "TechCrunch AI 板块，硅谷 AI 创业、融资与公司动态报道，产业资本视角的代表媒体。"
+    },
+    {
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence",
+      "type": "media",
+      "priority": 2,
+      "category": "industry",
+      "description": "The Verge AI 板块，以科技产品与消费者视角报道 AI，适合产品解读与行业争议话题。"
+    },
+    {
+      "name": "36Kr AI",
+      "url": "https://36kr.com/information/AI/",
+      "type": "media",
+      "priority": 2,
+      "category": "industry",
+      "description": "36氪 AI 频道，国内 AI 产业、创业公司与融资动态报道，产业与商业视角并重。"
+    },
+    {
+      "name": "量子位",
+      "url": "https://www.qbitai.com/",
+      "type": "media",
+      "priority": 1,
+      "category": "industry",
+      "description": "国内 AI 领域权威媒体，前沿资讯速度快，兼顾深度解读与行业人物报道。"
+    },
+    {
+      "name": "机器之心",
+      "url": "https://www.jiqizhixin.com/",
+      "type": "media",
+      "priority": 1,
+      "category": "research",
+      "description": "AI 技术与产业深度报道媒体，以论文解读与技术原理见长，适合技术向内容引用。"
+    },
+    {
+      "name": "AI前线",
+      "url": "https://aifrontline.aiefficient.com/",
+      "type": "media",
+      "priority": 2,
+      "category": "tools",
+      "description": "面向开发者的 AI 技术实践媒体，关注工具链、工程落地与一线实践经验。"
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/",
+      "type": "media",
+      "priority": 3,
+      "category": "industry",
+      "description": "VentureBeat AI 板块，侧重企业级 AI 应用与产品发布报道，B 端视角补充信源。"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com/",
+      "type": "community",
+      "priority": 1,
+      "category": "industry",
+      "description": "科技社区顶流，AI 热点讨论与一手开发者反馈聚集地，常出现一手爆料与深度评论。"
+    },
+    {
+      "name": "Reddit r/MachineLearning",
+      "url": "https://www.reddit.com/r/MachineLearning/",
+      "type": "community",
+      "priority": 2,
+      "category": "research",
+      "description": "机器学习社区，论文讨论、从业者观点与争议话题，可捕捉学界与工业界的真实反馈。"
+    },
+    {
+      "name": "X/Twitter AI KOLs",
+      "url": "https://x.com/",
+      "type": "community",
+      "priority": 1,
+      "category": "industry",
+      "description": "X 平台 AI 领域意见领袖动态，模型发布与争议常在此首发，是最快的一手信息源之一。"
+    },
+    {
+      "name": "Product Hunt AI",
+      "url": "https://www.producthunt.com/topics/artificial-intelligence",
+      "type": "media",
+      "priority": 2,
+      "category": "product",
+      "description": "Product Hunt AI 分类，全球 AI 新产品发现与热度排行，适合追踪产品创新与趋势。"
+    },
+    {
+      "name": "AI产品榜",
+      "url": "https://www.aicpb.com/",
+      "type": "media",
+      "priority": 2,
+      "category": "product",
+      "description": "国内 AI 产品流量与热度榜单，提供国产 AI 产品的访问量、留存等运营数据参考。"
+    }
+  ]
+}

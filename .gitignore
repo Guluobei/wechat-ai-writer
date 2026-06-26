@@ -1,0 +1,20 @@
+# 测试残留
+projects/
+__pycache__/
+*.pyc
+*.pyo
+
+# 临时文件
+*.tmp
+*.bak
+*.lock
+*.log
+*.old
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+*.env
