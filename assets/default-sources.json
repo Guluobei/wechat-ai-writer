@@ -1,12 +1,12 @@
 {
   "meta": {
     "name": "AI 行业默认信源清单",
-    "version": "1.0.0",
-    "description": "公众号 AI 行业内容创作 skill 的内置默认信源，覆盖官方博客、论文、媒体、社区、产品五大类型。priority 越小优先级越高（1=核心必采，2=常规采集，3=补充采集）。",
-    "type_enum": ["official", "media", "community", "paper"],
+    "version": "1.1.0",
+    "description": "公众号 AI 行业内容创作 skill 的内置默认信源，覆盖官方博客、论文、媒体、社区、产品、实时资讯六大类型。priority 越小优先级越高（1=核心必采，2=常规采集，3=补充采集）。",
+    "type_enum": ["official", "media", "community", "paper", "realtime"],
     "category_enum": ["model", "product", "research", "industry", "tools"],
     "priority_enum": "1(最高) / 2(常规) / 3(补充)",
-    "updated_at": "2026-06-26"
+    "updated_at": "2026-06-29"
   },
   "sources": [
     {
@@ -200,6 +200,14 @@
       "priority": 2,
       "category": "product",
       "description": "国内 AI 产品流量与热度榜单，提供国产 AI 产品的访问量、留存等运营数据参考。"
+    },
+    {
+      "name": "aihot AI 热点日报",
+      "url": "https://aihot.virxact.com/",
+      "type": "realtime",
+      "priority": 1,
+      "category": "industry",
+      "description": "aihot.virxact.com 每日 AI 热点聚合，提供结构化的 AI 动态日报、精选条目流和分类检索（模型/产品/行业/论文/技巧），无需 API Key，通过 WebFetch 调用接口获取实时数据。"
     }
   ]
 }
